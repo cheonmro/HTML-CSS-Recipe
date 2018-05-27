@@ -24,19 +24,27 @@ body{
 }
 .main{
   background-color: skyblue;
-  padding: 0 15px;
+  padding: 30px 0;
+  /* flex: #1 */
+  /* Should add 'display: flex' to parent(flex-container) of child element(flex-item) in order to layout flex-item */
+  display: flex;
+  /* flex: #2 */
+  justify-content: space-evenly;
 }
+/* float: #2 */
 /* Add empty content after group3(last child of main) to maintain the size of main using ::after(pseudo-element) */
-.clearfix::after{
+/* .clearfix::after{
   content: "";
   background-color: black;
   color: white;
   clear: both;
   display: block;
-}
+} */
 .group{
-  float: left;
+  /* float: #1 */
+  /* float: left; */
   margin: 0 15px;
+  height: 20vh;
 }
 .group1{
   background-color: green;
