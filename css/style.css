@@ -1,0 +1,74 @@
+*, *::before, *::after{
+  box-sizing: border-box; 
+}
+body{
+  background-color: #fff;
+  font-size: 16px;
+  margin: 0;
+}
+/* layout */
+.wrapper{
+  background-color: yellow;
+}
+.header, .visual, .main, .slogan, .footer{
+  width: 940px;
+  margin: 0 auto;
+}
+.header{
+  background-color: pink;
+  height: 10vh;
+}
+.visual{
+  background-color: lime;
+  height: 10vh;
+}
+.main{
+  background-color: skyblue;
+  padding: 0 15px;
+}
+/* Add empty content after group3(last child of main) to maintain the size of main using ::after(pseudo-element) */
+.clearfix::after{
+  content: "";
+  background-color: black;
+  color: white;
+  clear: both;
+  display: block;
+}
+.group{
+  float: left;
+  margin: 0 15px;
+}
+.group1{
+  background-color: green;
+  width: 250px;
+  /* background-color: rgba(255,255,255,.5); */
+}
+.group2{
+  background-color: red;
+  width: 380px;
+  /* background-color: hsla(120,70%,60%,0.5); */
+}
+.group3{
+  background-color: peru;
+  width: 190px;
+}
+.slogan{
+  background-color: blueviolet;
+  height: 10vh;
+}
+/* Even thought I set margin '0' for each element(header,visual,main,slogan,footer),
+  there was margin(gap) about 19px from slogan-heading when I checked it on chrome browser.
+  So, I needed to set margin '0' for slogan-heading so that I can fill the gap between slogan-heading and main.
+  If there are issues about margin, padding, border, etc after I did css perfectly without error,
+  go to the webpage, and 'inspect' to see if there is margin, padding, border, etc, so I could find what's different from what I wrote.
+*/
+.slogan-heading{
+  margin: 0;
+}
+.footer-bg{
+  background-color: orange;
+}
+.footer{
+  background-color: silver;
+  height: 10vh;
+}
