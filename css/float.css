@@ -1,0 +1,148 @@
+@import url("normalize.css");
+*, *::before, *::after{
+  box-sizing: border-box; 
+}
+/* css rest */
+h1, h2, h3, h4, h5, h6{
+  margin: 0;
+  padding: 0;
+}
+/* css rest */
+ul{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+/* css rest */
+a{
+  color: inherit;
+  text-decoration: none;
+}
+/* hidden contents for navigation menu */
+/* When I want to hide contents on a page,
+    I could use 'display: none'. But, it means that I've made the contents 'inaccesible' by screen reader.
+    Because I need to consider web accessibility, 'readable-hidden' class should position the content off screen,
+    which still leaves it screen reader accessible.
+    To do that, use 'position: absolute' and 'left: -9999em;'
+
+    reference: https://css-tricks.com/places-its-tempting-to-use-display-none-but-dont/
+*/
+.readable-hidden{
+  background-color: darkkhaki;
+  color: red;
+  position: absolute;
+  left: -9999em;
+}
+body{
+  background-color: #fff;
+  font-size: 16px;
+  margin: 0;
+}
+/* layout */
+.wrapper{
+  background-color: yellow;
+}
+.header, .visual, .main, .slogan, .footer{
+  width: 940px;
+  margin: 0 auto;
+}
+.header{
+  background-color: pink;
+  padding: 0 30px;
+  position: relative;
+}
+.logo{
+  position: absolute;
+  top: 45px;
+  left: 65px;
+
+}
+/* member layout using float */
+.member{
+  background-color: skyblue;
+  /* #2: float member to right */
+  float: right;
+  /* #3: change padding size */
+  padding: 10px 0;
+
+}
+.member li{
+  /* #1: float each 'li' to left */
+  float: left;
+  text-transform: uppercase;
+  position: relative;
+  right: -10px;
+}
+.member li:first-child{
+  margin-left: auto;
+}
+/* #4: add ':' before each 'li' from second 'li' */
+.member li:nth-child(n+2)::before{
+  content: ":";
+}
+/* #5: change padding size  */
+.member a{
+  padding: 5px 10px;
+}
+.visual{
+  background-color: lime;
+  height: 10vh;
+}
+.main{
+  background-color: skyblue;
+  padding: 30px 0;
+  /* flex: #1 */
+  /* Should add 'display: flex' to parent(flex-container) of child element(flex-item) in order to layout flex-item */
+  display: flex;
+  /* flex: #2 */
+  justify-content: space-evenly;
+}
+/* float: #2 */
+/* Add empty content after group3(last child of main) to maintain the size of main using ::after(pseudo-element) */
+/* .clearfix::after{
+  content: "";
+  background-color: black;
+  color: white;
+  clear: both;
+  display: block;
+} */
+.group{
+  /* float: #1 */
+  /* float: left; */
+  margin: 0 15px;
+  height: 20vh;
+}
+.group1{
+  background-color: green;
+  width: 250px;
+  /* background-color: rgba(255,255,255,.5); */
+}
+.group2{
+  background-color: red;
+  width: 380px;
+  /* background-color: hsla(120,70%,60%,0.5); */
+}
+.group3{
+  background-color: peru;
+  width: 190px;
+}
+.slogan{
+  background-color: blueviolet;
+  height: 10vh;
+}
+/* Even thought I set margin '0' for each element(header,visual,main,slogan,footer),
+  there was margin(gap) about 19px from slogan-heading when I checked it on chrome browser.
+  So, I needed to set margin '0' for slogan-heading so that I can fill the gap between slogan-heading and main.
+  If there are issues about margin, padding, border, etc after I did css perfectly without error,
+  go to the webpage, and 'inspect' to see if there is margin, padding, border, etc, so I could find what's different from what I wrote.
+*/
+.slogan-heading{
+  margin: 0;
+}
+.footer-bg{
+  background-color: orange;
+}
+.footer{
+  background-color: silver;
+  height: 10vh;
+}
