@@ -57,6 +57,32 @@ body{
   left: 65px;
 
 }
+/* member layout using display */
+.member{
+  background-color: skyblue;
+  /* #2: move text from left to right */
+  text-align: right;
+  /* #3: change padding size */
+  padding: 10px 0;
+  font-size: 0;
+  position: relative;
+  right: -10px;
+}
+.member li{
+  /* #1: vertical member -> horizontal member using display: inline-block */
+  display: inline-block;
+  font-size: 16px;
+  text-transform: uppercase;
+  /* padding: 5px 10px; */
+}
+/* #4: add ':' before each 'li' from second 'li' */
+.member li:nth-child(n+2)::before{
+  content: ":";
+}
+/* #5: change padding size  */
+.member a{
+  padding: 5px 10px;
+}
 .visual{
   background-color: lime;
   height: 10vh;
