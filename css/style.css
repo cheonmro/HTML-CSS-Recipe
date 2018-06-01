@@ -28,11 +28,23 @@ a{
     reference: https://css-tricks.com/places-its-tempting-to-use-display-none-but-dont/
 */
 .readable-hidden{
-  background-color: darkkhaki;
+  /* background-color: darkkhaki; */
   color: red;
   position: absolute;
-  left: -9999em;
+  /* left: -9999em; */
+  /* Another way to hide contents on a page */
+  width: 1px;
+  height: 1px;
+  clip: rect(0,0,0,0);
+  margin: -1px;
+  overflow: hidden;
 }
+/* This feature(Another way) has been removed from the Web standards. 
+Though some browsers may still support it, 
+it is in the process of being dropped. 
+Avoid using it and update existing code if possible;  */
+
+
 body{
   background-color: #fff;
   font-size: 16px;
