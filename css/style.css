@@ -95,6 +95,59 @@ body{
 .member a{
   padding: 5px 10px;
 }
+/* main menu */
+.menu{
+  background: linear-gradient(to bottom, #ea892e 0%, #ce5327 35%, #ce5327 65%, #ea892e 100%);
+  background-color: #ce5327;
+  border-top: 2px solid #000;
+  border-radius: 0 0 5px 5px;
+  padding-left: 225px;
+  height: 47px;
+}
+.menu-item{
+  float: left;
+}
+.menu-item-text{
+  line-height: 45px;
+  border-left: 2px solid rgba(255,255,255,.5);
+  display: block;
+  padding: 0 20px;
+  color: #fff;
+  font-weight: 700;
+  text-shadow: 1px 0 0 #000, 0 1px 0 #000, -1px 0 0 #000, 0 -1px 0 #000;
+}
+.menu-item-text:hover::after{
+  content: "";
+  background-color: #000;
+  display: block;
+  height: 2px;
+}
+.menu-item-text:hover{
+  color: #ff0;
+  cursor: pointer;
+}
+.sub-menu{
+  background-color: pink;
+  position: absolute;
+}
+.menu-item:nth-child(1) .sub-menu{
+  display: block;
+}
+.menu-item:nth-child(2) .sub-menu{
+  display: none;
+}
+.menu-item:nth-child(3) .sub-menu{
+  display: none;
+}
+.menu-item:nth-child(4) .sub-menu{
+  display: none;
+}
+.menu-item:nth-child(5) .sub-menu{
+  display: none;
+}
+.menu-item:nth-child(6) .sub-menu{
+  display: none;
+}
 .visual{
   background-color: lime;
   height: 10vh;
