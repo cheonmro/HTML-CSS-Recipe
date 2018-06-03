@@ -1,5 +1,6 @@
 @import url("https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css");
 @import url("normalize.css");
+@import url("fontello.css");
 *, *::before, *::after{
   box-sizing: border-box; 
 }
@@ -68,7 +69,7 @@ body{
 }
 .header{
   background-color: pink;
-  padding: 0 30px 50px;
+  padding: 0 30px 40px;
   position: relative;
   border-radius: 0 0 15px 15px;
 }
@@ -146,23 +147,42 @@ body{
 .sub-menu li{
   display: inline-block;
 }
+.sub-menu a{
+  display: inline-block;
+  padding: 8px 5px 10px 0;
+  margin-right: 10px;
+}
+/* Add font icon infront of <a> tag using fontello */
+.sub-menu a::before{
+  font-family: "fontello";
+  content: '\f192';
+}
+.sub-menu a:hover::before{
+  content: '\e800';
+}
 .menu-item:nth-child(1) .sub-menu{
-  display: block;
+  display: none;
+  left: 0;
 }
 .menu-item:nth-child(2) .sub-menu{
   display: none;
+  left: 0;
 }
 .menu-item:nth-child(3) .sub-menu{
   display: none;
+  left: 0;
 }
 .menu-item:nth-child(4) .sub-menu{
   display: none;
+  right: 0;
 }
 .menu-item:nth-child(5) .sub-menu{
   display: none;
+  right: 0;
 }
 .menu-item:nth-child(6) .sub-menu{
   display: none;
+  right: 0;
 }
 .visual{
   background-color: lime;
