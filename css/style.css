@@ -139,6 +139,7 @@ body{
 }
 .sub-menu{
   background-color: pink;
+  display: none;
   position: absolute;
   top: 47px;
   left: 0;
@@ -161,27 +162,21 @@ body{
   content: '\e800';
 }
 .menu-item:nth-child(1) .sub-menu{
-  display: none;
   left: 0;
 }
 .menu-item:nth-child(2) .sub-menu{
-  display: none;
   left: 0;
 }
 .menu-item:nth-child(3) .sub-menu{
-  display: none;
   left: 0;
 }
 .menu-item:nth-child(4) .sub-menu{
-  display: none;
   right: 0;
 }
 .menu-item:nth-child(5) .sub-menu{
-  display: none;
   right: 0;
 }
 .menu-item:nth-child(6) .sub-menu{
-  display: none;
   right: 0;
 }
 .visual{
