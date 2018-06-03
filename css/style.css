@@ -115,6 +115,7 @@ body{
 }
 .menu-item{
   float: left;
+  position: relative;
 }
 .menu-item-text{
   line-height: 45px;
@@ -138,6 +139,12 @@ body{
 .sub-menu{
   background-color: pink;
   position: absolute;
+  top: 47px;
+  left: 0;
+  white-space: nowrap;
+}
+.sub-menu li{
+  display: inline-block;
 }
 .menu-item:nth-child(1) .sub-menu{
   display: block;
