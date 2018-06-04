@@ -1,0 +1,232 @@
+@import url("https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css");
+@import url("normalize.css");
+@import url("fontello.css");
+*, *::before, *::after{
+  box-sizing: border-box; 
+}
+/* css rest */
+h1, h2, h3, h4, h5, h6{
+  margin: 0;
+  padding: 0;
+}
+/* css rest */
+ul{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+/* css rest */
+a{
+  color: inherit;
+  text-decoration: none;
+}
+/* hidden contents for navigation menu */
+/* When I want to hide contents on a page,
+    I could use 'display: none'. But, it means that I've made the contents 'inaccesible' by screen reader.
+    Because I need to consider web accessibility, 'readable-hidden' class should position the content off screen,
+    which still leaves it screen reader accessible.
+    To do that, use 'position: absolute' and 'left: -9999em;'
+
+    reference: https://css-tricks.com/places-its-tempting-to-use-display-none-but-dont/
+*/
+.readable-hidden{
+  /* background-color: darkkhaki; */
+  color: red;
+  position: absolute;
+  /* left: -9999em; */
+  /* Another way to hide contents on a page */
+  width: 1px;
+  height: 1px;
+  clip: rect(0,0,0,0);
+  margin: -1px;
+  overflow: hidden;
+}
+/* This feature(Another way) has been removed from the Web standards. 
+Though some browsers may still support it, 
+it is in the process of being dropped. 
+Avoid using it and update existing code if possible;  */
+
+
+html{
+  font-size: 10px;
+}
+body{
+  background-color: #fff;
+  font-size: 1.4rem;
+  font-family: 'Spoqa Han Sans';
+  margin: 0;
+}
+/* layout */
+.wrapper{
+  background-color: yellow;
+  background-image: url("images/bg_flower.png");
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+}
+.header, .visual, .main, .slogan, .footer{
+  width: 940px;
+  margin: 0 auto;
+}
+.header{
+  background-color: pink;
+  padding: 0 30px 40px;
+  position: relative;
+  border-radius: 0 0 15px 15px;
+}
+.logo{
+  padding: 45px 0 0 35px;
+}
+/* member layout using flex */
+.member{
+  /* #1 */
+  display: flex;
+  /* #2 */
+  justify-content: flex-end;
+  margin-top: -70px;
+  margin-right: -10px;
+}
+.member li{
+  text-transform: uppercase;
+}
+.member li:nth-child(n+2)::before{
+  content: ":";
+}
+.member a{
+  padding: 5px 10px;
+}
+/* main menu */
+.menu{
+  background: linear-gradient(to bottom, #ea892e 0%, #ce5327 35%, #ce5327 65%, #ea892e 100%);
+  background-color: #ce5327;
+  border-top: 2px solid #000;
+  border-radius: 0 0 5px 5px;
+  margin-top: 10px;
+  padding-left: 225px;
+}
+.menu-item{
+  float: left;
+  position: relative;
+}
+.menu-item-text{
+  /* border-left: 2px solid rgba(255,255,255,.5); */
+  /* padding: 0 20px; */
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.6rem;
+  text-shadow: 1px 0 0 #000, 0 1px 0 #000, -1px 0 0 #000, 0 -1px 0 #000;
+}
+.menu-item-text:hover::after{
+  content: "";
+  background-color: #000;
+  display: block;
+  height: 2px;
+}
+.menu-item-text:hover{
+  color: #ff0;
+  cursor: pointer;
+}
+.sub-menu{
+  background-color: pink;
+  display: none;
+  position: absolute;
+  top: 47px;
+  left: 0;
+  white-space: nowrap;
+}
+.sub-menu li{
+  display: inline-block;
+}
+.sub-menu a{
+  display: inline-block;
+  padding: 8px 5px 10px 0;
+  margin-right: 10px;
+}
+/* Add font icon infront of <a> tag using fontello */
+.sub-menu a::before{
+  font-family: "fontello";
+  content: '\f192';
+}
+.sub-menu a:hover::before{
+  content: '\e800';
+}
+.menu-item:nth-child(1) .sub-menu{
+  left: 0;
+}
+.menu-item:nth-child(2) .sub-menu{
+  left: 0;
+}
+.menu-item:nth-child(3) .sub-menu{
+  left: 0;
+}
+.menu-item:nth-child(4) .sub-menu{
+  right: 0;
+}
+.menu-item:nth-child(5) .sub-menu{
+  right: 0;
+}
+.menu-item:nth-child(6) .sub-menu{
+  right: 0;
+}
+.visual{
+  background-color: lime;
+  height: 10vh;
+}
+.main{
+  background-color: skyblue;
+  padding: 30px 0;
+  border-radius: 15px 15px 0 0;
+  /* flex: #1 */
+  /* Should add 'display: flex' to parent(flex-container) of child element(flex-item) in order to layout flex-item */
+  display: flex;
+  /* flex: #2 */
+  justify-content: space-evenly;
+}
+/* float: #2 */
+/* Add empty content after group3(last child of main) to maintain the size of main using ::after(pseudo-element) */
+/* .clearfix::after{
+  content: "";
+  background-color: black;
+  color: white;
+  clear: both;
+  display: block;
+} */
+.group{
+  /* float: #1 */
+  /* float: left; */
+  margin: 0 15px;
+  height: 20vh;
+}
+.group1{
+  background-color: green;
+  width: 250px;
+  /* background-color: rgba(255,255,255,.5); */
+}
+.group2{
+  background-color: red;
+  width: 380px;
+  /* background-color: hsla(120,70%,60%,0.5); */
+}
+.group3{
+  background-color: peru;
+  width: 190px;
+}
+.slogan{
+  background-color: blueviolet;
+  height: 10vh;
+}
+/* Even thought I set margin '0' for each element(header,visual,main,slogan,footer),
+  there was margin(gap) about 19px from slogan-heading when I checked it on chrome browser.
+  So, I needed to set margin '0' for slogan-heading so that I can fill the gap between slogan-heading and main.
+  If there are issues about margin, padding, border, etc after I did css perfectly without error,
+  go to the webpage, and 'inspect' to see if there is margin, padding, border, etc, so I could find what's different from what I wrote.
+*/
+.slogan-heading{
+  margin: 0;
+}
+.footer-bg{
+  background-color: orange;
+}
+.footer{
+  background-color: silver;
+  height: 10vh;
+}
