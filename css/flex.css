@@ -94,7 +94,7 @@ body{
 .member a{
   padding: 5px 10px;
 }
-/* main menu */
+/* main menu layout using flex */
 .menu{
   background: linear-gradient(to bottom, #ea892e 0%, #ce5327 35%, #ce5327 65%, #ea892e 100%);
   background-color: #ce5327;
@@ -102,9 +102,17 @@ body{
   border-radius: 0 0 5px 5px;
   margin-top: 10px;
   padding-left: 225px;
+  /* #1 */
+  display: flex;
+  /* #2 */
+  align-items: center;
+  height: 47px;
 }
 .menu-item{
-  float: left;
+  border-left: 2px solid rgba(255,255,255,.5);
+  /* #3 */
+  flex: 1 1 auto;
+  text-align: center;
   position: relative;
 }
 .menu-item-text{
@@ -126,11 +134,9 @@ body{
   cursor: pointer;
 }
 .sub-menu{
-  background-color: pink;
   display: none;
   position: absolute;
-  top: 47px;
-  left: 0;
+  top: 35px;
   white-space: nowrap;
 }
 .sub-menu li{
