@@ -30,7 +30,7 @@ a{
 
     reference: https://css-tricks.com/places-its-tempting-to-use-display-none-but-dont/
 */
-.readable-hidden{
+.readable-hidden, legend{
   /* background-color: darkkhaki; */
   color: red;
   position: absolute;
@@ -265,6 +265,73 @@ body{
 .group3{
   background-color: peru;
   width: 190px;
+}
+/* login */
+.login{
+  background: radial-gradient(circle at right top, #ea892e, #ce5327);
+  background-color: #ce5327;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 5px 5px 0 0 #aaa;
+}
+.login-heading{
+  color: #ff0;
+  font-size: 1.5rem;
+}
+.login-form{
+  background-color: #fff;
+  border-radius: 5px 5px 0 0;
+  padding: 10px 10px 0 10px;
+  margin-top: 10;
+}
+.login-form fieldset{
+  margin: 0;
+  padding: 0 0 10px 0;
+  border: 0;
+  border-bottom: 1px solid #aaa;
+  position: relative;
+}
+.login-form [type="email"], .login-form [type="password"]{
+  width: 100px;
+  height: 22px;
+  border: 1px solid #aaa;
+  padding: 1px 1px 1px 5px;
+}
+.user-id{
+  margin-bottom: 6px;
+}
+.login-form [for="user-id"], .login-form [for="user-pw"]{
+  width: 4em;
+  display: inline-block;
+}
+/* login button layout using position absolute */
+.btn-login{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  border: 0;
+  border-radius: 3px;
+  background: #ce5327;
+  color: #fff;
+  font: inherit;
+}
+/* sign layout using flex */
+.sign{
+  background-color: #fff;
+  border-radius: 0 0 5px 5px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.sign a{
+  letter-spacing: -1px;
+  padding: 5px 0;
+}
+.sign .icon-right-open::before{
+  color: #ce5327;
 }
 .slogan{
   background-color: blueviolet;
