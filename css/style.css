@@ -349,6 +349,44 @@ body{
   line-height: 30px;
   padding-left: 45px;
 }
+/* term */
+.term{
+  background: linear-gradient(to bottom, #eee, #ccc);
+  margin-top: 20px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  padding: 10px 15px 10px 15px;
+}
+.term-heading{
+  font-size: 1.5rem;
+}
+.term-list{
+  margin: 10px 0 0;
+}
+.term-list-subject{
+  color: #296897;
+}
+.term-list-subject, .term-list-brief{
+  float: right;
+  width: 145px;
+}
+.term-list-thumbnail{
+  margin: 0;
+  float: left;
+}
+.term-list-thumbnail img{
+  display: block;
+}
+.term-list-brief{
+  margin: 0;
+  margin-top: 5px;
+  line-height: 1.5;
+}
+.term-list::after{
+  content: "";
+  clear: both;
+  display: block;
+}
 /* slogan */
 .slogan{
   background-color: blueviolet;
