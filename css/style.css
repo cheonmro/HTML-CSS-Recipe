@@ -333,6 +333,23 @@ body{
 .sign .icon-right-open::before{
   color: #ce5327;
 }
+/* validation banner */
+.validation-list{
+  margin-top: 25px;
+}
+.validation-list{
+  margin: 10px 0;
+}
+.validation-list a{
+  background: url("images/validation_icon.png") no-repeat 15px 50%, linear-gradient(to bottom, #eee, #ccc);
+  background-color: #ccc;
+  display: block;
+  border: 1px solid #aaa;
+  border-radius: 15px;
+  line-height: 30px;
+  padding-left: 45px;
+}
+/* slogan */
 .slogan{
   background-color: blueviolet;
   height: 10vh;
