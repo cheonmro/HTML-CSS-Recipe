@@ -422,6 +422,74 @@ body{
   border-radius: 3px;
   border: 1px solid #aaa;
 }
+/* notice and pds */
+.board{
+  margin-top: 20px;
+  position: relative;
+}
+.tab{
+  cursor: pointer;
+  border: 1px solid #aaa;
+  border-radius: 5px 5px 0 0;
+  background: linear-gradient(to bottom, #eee, #ccc);
+  background-color: #ccc;
+  color: #666;
+  font-size: 1.4rem;
+  font-weight: 400;
+  padding: 5px 10px;
+  position: absolute;
+  top: 0;
+}
+.pds-heading{
+  left: 73px;
+}
+.is-act .tab{
+  background: #fff;
+  border-color: #ce5327 #ce5327 #fff #ce5327;
+  color: #ce5327;
+}
+.notice-list, .notice-more, .pds-list, .pds-more{
+  display: none;
+}
+.is-act .notice-list, .is-act .notice-more,
+.is-act .pds-list, .is-act .pds-more{
+  display: block;
+}
+.notice-list, .pds-list{
+  padding-top: 45px;
+}
+.notice-list li, .pds-list li{
+  margin-bottom: 10px;
+}
+.notice-list li::after, .pds-list li::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+.notice-list li::before, .pds-list li::before{
+  float: left;
+  margin-top: 2px;
+}
+.notice-list a, .pds-list a{
+  float: left;
+  width: calc(100% - 105px);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.notice-list time, .pds-list time{
+  float: right;
+  margin-left: auto;
+}
+.notice-more::before, .pds-more::before{
+  color: hsla(110, 40%,30%,1);
+}
+.notice-more, .pds-more{
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  padding: 8px;
+}
 /* slogan */
 .slogan{
   background-color: blueviolet;
