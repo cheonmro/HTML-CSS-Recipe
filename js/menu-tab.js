@@ -1,6 +1,9 @@
 var tab = $('.tab');
 var list = $('.notice, .pds');
-var list_item = $('.notice li, .pds-list li');
+var list_item = $('.board li');
+
+// Add tabindex to 'tab' that it can be keyboard focus
+tab.attr('tabindex', '0');
 
 // Add icon class to notice and pds
 list_item.attr('class', 'icon-dot-circled');
@@ -15,8 +18,10 @@ tab.click(function(e){
 // When keyboard event(enter and space), change to is-act
 tab.keyup(function(e){
   e.preventDefault();
-  if(e.keyCode === 13 | e.keyCode === 32){
+  if(e.keyCode === 13){
     list.removeClass('is-act');
     $(this).parent().addClass('is-act');
+  } else {
+    return false;
   }
 })
