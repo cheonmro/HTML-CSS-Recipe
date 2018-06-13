@@ -543,12 +543,136 @@ body{
 }
 /* event-related */
 .event-realted{
-  background: yellow;
+  background: linear-gradient(to bottom, #eee, #ccc);
+  background-color: #ccc;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  padding: 10px;
+}
+.event{
+  border-bottom: 1px solid #aaa;
+  position: relative;
+}
+.event-heading, .related-heading{
+  font-size: 1.5rem;
+}
+.event-heading span, .related-heading span{
+  color: #ce5327;
+}
+.event-thumbnail, .event-brief{
+  margin: 10px 0;
+}
+.event-thumbnail img{
+  box-shadow: 5px 5px 0 0 #aaa;
+  border: 1px solid #999;
+}
+.event-brief em{
+  font-style: normal;
+}
+.btn-event{
+  height: 22px;
+  overflow: hidden;
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  padding: 2px;
+}
+.btn-event-prev, .btn-event-next{
+  width: 19px;
+  height: 18px;
+  border: 0;
+  padding: 0;
+  text-indent: 50px;
+  white-space: nowrap;
+  background-image: url("images/back_forward.png");
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
+.btn-event-next{
+  background-position: 100% 0;
+}
+.related{
+  margin-top: 10px;
+}
+.related-list{
+  margin-top: 10px;
+  background: #fff;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  height: 27px;
+  overflow: hidden;
+  transition-property: all;
+  transition-duration: 500ms;
+}
+.related-list a{
+  display: block;
+  line-height: 25px;
+  text-indent: 25px;
+}
+.related-list:hover{
+  height: 147px;
+  padding: 10px 0 ;
 }
 /* favorite */
 .favorite{
-  background: pink;
+  background: linear-gradient(to bottom, #eee, #ccc);
+  background-color: #ccc;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  padding: 10px 10px 5px 10px;
   margin-top: 20px;
+  position: relative;
+}
+.favorite-heading{
+  font-size: 1.5rem;
+}
+.favorite-heading span{
+  color: #ce5327;
+}
+.favorite-more{
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  padding: 8px;
+}
+.favorite-list{
+  padding: 0;
+  overflow: hidden;
+  margin: 5px 0 0 0;
+  counter-reset: number;
+}
+.favorite-list li{
+  counter-increment: number;
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+}
+.favorite-list li::before{
+  content: counter(number);
+  color: #fff;
+  background: #999;
+  padding: 0 5px;
+  border-radius: 2px;
+  font-size: 1.1rem;
+  margin-right: 5px;
+}
+.up, .stop, .down{
+  width: 9px;
+  height: 0;
+  padding-top: 11px;
+  overflow: hidden;
+  margin-left: auto;
+  background-image: url("images/rank.png");
+  background-repeat: no-repeat;
+}
+.stop{
+  background-position: 0 50%;
+}
+.down{
+  background-position: 0 100%;
+}
+.favorite-more::before{
+  color: hsla(110, 40%, 30%, 1);
 }
 /* slogan */
 .slogan{
