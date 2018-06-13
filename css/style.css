@@ -541,6 +541,15 @@ body{
 .news-more::before{
   color: hsla(110, 40%, 30%, 1);
 }
+/* event-related */
+.event-realted{
+  background: yellow;
+}
+/* favorite */
+.favorite{
+  background: pink;
+  margin-top: 20px;
+}
 /* slogan */
 .slogan{
   background-color: blueviolet;
