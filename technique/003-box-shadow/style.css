@@ -1,0 +1,10 @@
+.box-shadow{
+  background-color: skyblue;
+  width: 200px;
+  height: 100px;
+  margin: 2rem auto;
+  /* To make box-shadow only one side, 
+  use only offset y(offset x is 0)
+  use negative spread radius */
+  box-shadow: 0 10px 5px -5px black;
+}
