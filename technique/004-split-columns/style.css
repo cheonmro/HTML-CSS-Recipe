@@ -1,0 +1,9 @@
+.split-column {
+  width: 100%;
+  max-width: 660px;
+  margin: 2rem auto;
+/*   -webkit-column-count: 3; */
+/*   -moz-column-count: 3; */
+  column-count: auto;
+  column-width: 100px;
+}
