@@ -1,0 +1,55 @@
+div {
+  background-color: #FFEE99;
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 80px;
+  margin-bottom: 12px;
+}
+
+/* 1-value syntax */
+.oneValueByKeyword {
+  background: url("https://mdn.mozillademos.org/files/11987/startransparent.gif") #FFEE99 no-repeat;
+  background-position: bottom;
+}
+.oneValueByLength {
+  background: url("https://mdn.mozillademos.org/files/11987/startransparent.gif") #FFEE99 no-repeat;
+  background-position: 50px;
+}
+.oneValueByPercent {
+  background: url("https://mdn.mozillademos.org/files/11987/startransparent.gif") #FFEE99 no-repeat;
+  background-position: 50%;
+}
+
+/* 2-value syntax */
+.twoValueByKeyword {
+  background: url("https://mdn.mozillademos.org/files/11987/startransparent.gif") #FFEE99 no-repeat;
+  background-position: right center;
+}
+.twoValueByLength {
+  background: url("https://mdn.mozillademos.org/files/11987/startransparent.gif") #FFEE99 no-repeat;
+  background-position: 50px 10px;
+}
+.twoValueByPercent {
+  background: url("https://mdn.mozillademos.org/files/11987/startransparent.gif") #FFEE99 no-repeat;
+  background-position: 50% 10%;
+}
+
+/* 3-value syntax */
+.threeValue {
+  background: url("https://mdn.mozillademos.org/files/11987/startransparent.gif") #FFEE99 no-repeat;
+  background-position: right 45px bottom;
+}
+
+/* 4-value syntax */
+.fourValue {
+  background: url("https://mdn.mozillademos.org/files/11987/startransparent.gif") #FFEE99 no-repeat;
+  background-position: right 45px bottom 20px;
+}
+
+/* multiple images syntax */
+.multipleImages {
+  background-image:    url("https://mdn.mozillademos.org/files/11987/startransparent.gif"), 
+                       url("https://mdn.mozillademos.org/files/7693/catfront.png");
+  background-position: 0px 0px,
+                       center;
+}
